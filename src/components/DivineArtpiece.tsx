@@ -106,20 +106,13 @@ export default function DivineArtpiece({ language }: DivineArtpieceProps) {
       {/* Interactive Layout: Grid of Image (Left) & Hotspots details (Right) */}
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
         {/* Left Column: Image with loss simulator overlay filter (lg:span-7) */}
-        <div className="lg:col-span-7 flex flex-col items-center">
-          <div className="relative rounded-2xl overflow-hidden border border-brand-amber/30 bg-brand-charcoal shadow-2xl group w-full aspect-[16/9]">
-            {/* Main Generated Image with active CSS filters matching loss simulation */}
-            <img
-              src="/src/assets/images/divine_sensors_art_1783326370148.jpg"
-              alt="Divine Sensory Receptors Masterpiece"
-              referrerPolicy="no-referrer"
-              className={`w-full h-[112%] object-cover object-top transition-all duration-1000 ${
-                lossActive 
-                  ? 'filter grayscale contrast-125 brightness-[0.35] blur-[1px]' 
-                  : 'group-hover:scale-[1.02]'
-              }`}
-              id="generated-art-element"
-            />
+        <div className="relative rounded-2xl overflow-hidden border border-brand-amber/20 bg-white shadow-2xl group w-full aspect-[16/9]">
+         <img 
+  src="/src/assets/images/divine_sensors_art_1783326370148.jpg"
+  alt="Divine Sensory Receptors Masterpiece"
+  className="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-all duration-1000"
+  id="generated-art-element"
+/>
 
             {/* Glowing Quranic Thuluth verse watermark simulation on UI overlay */}
             <div className="absolute top-4 right-4 bg-brand-charcoal/40 backdrop-blur-md border border-brand-amber/20 rounded-xl px-4 py-2 pointer-events-none">
