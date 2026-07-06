@@ -1,0 +1,6 @@
+{
+  "name": "Divine Sensors Encyclopedia",
+  "description": "An interactive bilingual encyclopedia showcasing 12 miraculous divine sensory systems embedded in the human body, their functions, failure impacts, and causes, highlighting the ultimate design of the Creator.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

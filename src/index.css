@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@300;400;500;600;700;800&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Cairo", "Inter", system-ui, sans-serif;
+  --font-serif: "Amiri", "Playfair Display", Georgia, serif;
+  --color-brand-cream: #fbfbf8;
+  --color-brand-clay: #f2ede4;
+  --color-brand-amber: #cca43b;
+  --color-brand-charcoal: #1e1e1a;
+  --color-brand-dark-brown: #332d25;
+}
+
+@layer base {
+  body {
+    background-color: #f6f3eb;
+    color: #1e1e1a;
+    font-family: var(--font-sans);
+    transition: background-color 0.5s ease, color 0.5s ease;
+  }
+}
+
+/* Custom glow animations and keyframes */
+@keyframes pulseGlow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.6;
+    filter: drop-shadow(0 0 4px rgba(204, 164, 59, 0.4));
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+    filter: drop-shadow(0 0 12px rgba(204, 164, 59, 0.9));
+  }
+}
+
+.animate-pulse-glow {
+  animation: pulseGlow 2s infinite ease-in-out;
+}
+
+@keyframes spinVertigo {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(1.5deg) scale(1.01); }
+  50% { transform: rotate(-1.5deg) scale(0.99); }
+  75% { transform: rotate(1deg) scale(1.005); }
+  100% { transform: rotate(0deg); }
+}
+
+.animate-vertigo {
+  animation: spinVertigo 6s infinite ease-in-out;
+}
+
+@keyframes breathWarm {
+  0%, 100% { opacity: 0.85; filter: brightness(1); }
+  50% { opacity: 1; filter: brightness(1.1); }
+}
+
+.animate-breath-warm {
+  animation: breathWarm 4s infinite ease-in-out;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #f2ede4;
+}
+::-webkit-scrollbar-thumb {
+  background: #cca43b;
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a3822e;
+}
+
+/* Beautiful Print Media Styles for Exporting Cards */
+@media print {
+  body {
+    background-color: #ffffff !important;
+    color: #1a1510 !important;
+  }
+  header, footer, button, .no-print, #btn-simulate-failure, #btn-download-card, .ambient-sound-container {
+    display: none !important;
+  }
+  .printable-card {
+    border: 1px solid #cca43b !important;
+    box-shadow: none !important;
+    background: #ffffff !important;
+    padding: 20px !important;
+    border-radius: 12px !important;
+    page-break-inside: avoid;
+  }
+}
+
+/* Custom Masking Gradient to blend with the artwork's warm, rich tones */
+.divine-mask-gradient {
+  background: linear-gradient(to bottom, #3d3126, #241c15) !important;
+}
+
