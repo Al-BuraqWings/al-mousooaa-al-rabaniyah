@@ -38,7 +38,7 @@ export default function HumanSilhouette({
       </div>
 
       {/* Main SVG Blueprint */}
-   <div className="relative w-full aspect-[5/6] bg-[#0f172a] rounded-3xl border border-brand-amber/20 shadow-sm p-4 overflow-hidden flex items-center justify-center">
+   <div className="relative w-full aspect-[5/6] bg-brand-cream/80 rounded-3xl border border-brand-amber/10 shadow-inner p-4 overflow-hidden flex items-center justify-center">
         {/* Futuristic Grid Overlay */}
         <div className="absolute inset-0 bg-[radial-gradient(#cca43b_0.5px,transparent_0.5px)] [background-size:16px_16px] opacity-10 pointer-events-none" />
 
