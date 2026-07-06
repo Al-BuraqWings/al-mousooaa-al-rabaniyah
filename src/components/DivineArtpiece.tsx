@@ -108,7 +108,7 @@ export default function DivineArtpiece({ language }: DivineArtpieceProps) {
         {/* Left Column: Image with loss simulator overlay filter (lg:span-7) */}
         <div className="relative rounded-2xl overflow-hidden border border-brand-amber/20 bg-white shadow-2xl group w-full aspect-[16/9]">
 <img 
-  src="/src/assets/images/divine_sensors_art_1783326370148.jpg"
+  src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5"
   alt="Divine Sensory Receptors Masterpiece"
   className="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-all duration-1000"
   id="generated-art-element"
